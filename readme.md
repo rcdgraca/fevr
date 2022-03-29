@@ -1,4 +1,4 @@
-# Project static by FEVER
+# Project static
 
 Info about frontend project static
 
