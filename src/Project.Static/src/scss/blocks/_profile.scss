@@ -1,0 +1,135 @@
+.profile {
+	@include size(100%, auto);
+	background: url('/assets/img/layout/bg-profile.png') no-repeat center / cover;
+	padding: 12.5rem 1.5rem 20rem;
+	@extend %flex-center-h;
+	position: relative;
+	margin-top: -6.5rem;
+
+	&__wrapper {
+		width: 100%;
+		max-width: 120rem;
+		@extend %flex-column-center-h;
+		position: relative;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include size(100%);
+		background: linear-gradient(360deg, rgba(var(--black-rgb), 1) 0%, rgba(var(--black-rgb), 0) 100%);
+	}
+
+	&__header {
+		width: 100%;
+		display: flex;
+		margin-bottom: 6rem;
+
+		&-column {
+			@extend %flex-center-v;
+
+			&:last-of-type {
+				flex-grow: 1;
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	&__nav {
+		&-link {
+			margin-right: 3rem;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__avatar {
+		width: 100%;
+		@extend %flex-column-center-h;
+
+		&-img {
+			border-radius: 50%;
+			border: .5rem solid var(--white);
+		}
+
+		&-wrapper {
+			position: relative;
+			margin-bottom: 2rem;
+		}
+
+		&-level {
+			padding: 1rem 2rem;
+			background-color: var(--white);
+			border-radius: 2rem;
+			@include absolute(bottom -.6rem left 50%);
+			transform: translateX(-50%);
+			white-space: nowrap;
+			box-shadow: var(--box-shadow);
+		}
+
+		&-title {
+			margin-bottom: .5rem;
+		}
+
+		&-points {
+			display: flex;
+			align-items: center;
+			margin-right: 2rem;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			img {
+				max-width: 1.6rem;
+				margin-right: .5rem;
+			}
+
+			strong {
+				margin-right: .5rem;
+			}
+		}
+
+		&-icon {
+			margin-right: 1.5rem;
+			margin-bottom: 1.5rem;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+		&-stats {
+			@extend %flex-column-center-h;
+			padding: 0 3rem;
+			position: relative;
+
+			&::after {
+				content: '';
+				@include absolute(top 0 right 0);
+				@include size(.1rem, 95%);
+				background-color: var(--green-400);
+				box-shadow: 0 .4rem .4rem var(--green-400), 0 .3rem 1rem var(--green-400);
+			}
+
+			&:last-of-type {
+				&::after {
+					display: none;
+				}
+			}
+
+			strong {
+				margin-bottom: 1rem;
+			}
+		}
+
+		&-row {
+			display: flex;
+			margin-bottom: 1rem;
+		}
+	}
+}

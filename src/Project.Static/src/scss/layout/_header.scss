@@ -1,0 +1,67 @@
+.header {
+	@include size(100%, auto);
+	@extend %flex-center;
+	padding: 1.5rem;
+	background-color: rgba(var(--white-rgb), .1);
+	border-bottom: .1rem solid rgba(var(--white-rgb), .2);
+	@include z-index('sidewalk');
+	height: 6.5rem;
+
+	&__wrapper {
+		width: 100%;
+		max-width: 120rem;
+		@extend %flex-wrap;
+	}
+
+	&__column {
+		@extend %flex-center-v;
+		&:last-of-type {
+			flex-grow: 1;
+			@extend %flex-wrap;
+			justify-content: flex-end;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+
+		&-text {
+			white-space: nowrap;
+		}
+
+		&-img {
+			max-width: 3rem;
+			margin-right: 1rem;
+		}
+	}
+
+	&__social {
+		@extend %flex-wrap;
+		margin-right: 5rem;
+
+		&-item {
+			margin-right: 2rem;
+
+			&:last-of-type {
+				margin-right: 0
+			}
+		}
+	}
+
+	&__links {
+		@extend %flex-center-v;
+
+		&-item {
+			margin-right: 4rem;
+
+			&:last-of-type {
+				margin-right: 0
+			}
+		}
+
+		&-img {
+			margin-left: .5rem;
+		}
+	}
+}

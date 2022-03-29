@@ -1,0 +1,14 @@
+if !isStyleGuide
+	script(src='/assets/js/vendor/vendor.js' defer)
+	script(src='/assets/js/app/app.js' defer)
+else
+	script.
+		document.getElementById('blocks').style.display = 'none'
+		document.querySelector('[data-target=templates]').classList.add('is-active')
+		
+		document.querySelectorAll('.js-tab').forEach(el => el.addEventListener('click', e => {
+			document.querySelectorAll('.js-tab').forEach(el => el.classList.remove('is-active'))
+			document.querySelectorAll('.styleguide__table').forEach(el => el.style.display = 'none')
+			e.currentTarget.classList.add('is-active')
+			document.getElementById(e.currentTarget.dataset.target).style.display = 'table'
+		}))

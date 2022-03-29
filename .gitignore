@@ -1,0 +1,4 @@
+/src/Project.Static/node_modules
+/src/Project.Static/dist
+#remove after commiting new project
+/src/Project.Web

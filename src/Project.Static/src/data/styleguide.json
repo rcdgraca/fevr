@@ -1,0 +1,20 @@
+{
+	"templates": [{
+		"href": "home",
+		"status": "not-started",
+		"name": "Homepage",
+		"observations": "N/A"
+	}],
+
+	"blocks": [{
+		"href": "form",
+		"status": "done",
+		"name": "Form",
+		"observations": "N/A"
+	}, {
+		"href": "slider",
+		"status": "done",
+		"name": "Slider",
+		"observations": "N/A"
+	}]
+}

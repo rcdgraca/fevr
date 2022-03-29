@@ -1,0 +1,40 @@
+extends /views/styleguide/layout
+
+block styleguide
+
+	-
+		const templateName = 'Templates'
+			templateBlockName = 'Blocks'
+			colorHeading = 'black'
+
+	.styleguide__tabs
+		.styleguide__tabs-items
+			button.styleguide__button.js-tab(data-target='templates')
+				h1(class=`text text--${colorHeading}`)=templateName
+			button.styleguide__button.js-tab(data-target='blocks')
+				h1(class=`text text--${colorHeading}`)=templateBlockName
+		.styleguide__tabs-content
+			table.styleguide__table#templates
+				thead
+					tr
+						th #
+						th Status
+						th Name
+						th Observations
+				tbody
+					each item in styleguide.templates
+						tr
+							td.text.text--center
+								span(class=`status status--${item.status}`)
+							td
+								a(href=`/views/templates/${item.href}.html`)=item.name
+							td=item.observations
+
+			table.styleguide__table#blocks
+				thead
+					tr
+						th #
+						th Status
+						th Name
+						th Observations
+				tbody

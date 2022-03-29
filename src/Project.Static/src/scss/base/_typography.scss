@@ -1,0 +1,209 @@
+html {
+	font-size: var(--base-font);
+	font-family: $azo;
+}
+
+//include only the following properties:
+// font-family
+// font-size
+// font-weight
+// line-height
+// text-decoration
+// text-align
+// text-transform
+// color
+
+
+// blocks sort by order A-Z
+.btn {
+	font-weight: 700;
+	color: var(--blue-300);
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+}
+.header {
+	&__links {
+		&-link {
+			font-size: 1.3rem;
+			font-weight: var(--fw-bold);
+			text-transform: uppercase;
+			color: var(--white);
+			letter-spacing: .1rem;
+
+			&.btn {
+				color: var(--blue-300);
+			}
+		}
+	}
+
+	&__logo {
+		&-text {
+			color: var(--white);
+			font-size: 1.4rem;
+			font-weight: var(--fw-bold);
+			text-transform: uppercase;
+		}
+	}
+}
+
+.profile {
+	&__nav {
+		&-link {
+			font-size: 1.4rem;
+			color: var(--white);
+			text-transform: uppercase;
+		}
+	}
+
+	&__avatar {
+		&-level {
+			font-size: 1.6rem;
+			color: var(--blue-900);
+			font-weight: var(--fw-bold);
+			letter-spacing: .1rem;
+		}
+
+		&-title {
+			font-size: 3.5rem;
+			font-family: $azo-black;
+			color: var(--white);
+			letter-spacing: -.1rem;
+		}
+
+		&-link {
+			font-size: 1.3rem;
+			color: var(--green-400);
+		}
+
+		&-points {
+			font-size: 1.2rem;
+			color: var(--white);
+			letter-spacing: .1rem;
+		}
+
+		&-date {
+			font-size: 1rem;
+			color: var(--white);
+			text-transform: uppercase;
+			letter-spacing: .2rem;
+			opacity: .6;
+		}
+
+		&-stats {
+			strong {
+				font-family: $azo-black;
+				color: var(--green-400);
+				font-size: 3rem;
+				letter-spacing: -.1rem;
+			}
+
+			span {
+				font-size: 1.1rem;
+				color: var(--white);
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.progress {
+	&__nav {
+		&-item {
+			font-size: 1.7rem;
+			color: var(--white);
+			opacity: .5;
+			text-transform: uppercase;
+
+			&--active {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__block {
+		&-title {
+			font-family: $azo-black;
+			font-size: 3rem;
+			color: var(--green-400);
+			line-height: 3rem;
+
+			span {
+				color: var(--white);
+				font-family: $azo;
+				font-size: 1.1rem;
+				text-transform: uppercase;
+				letter-spacing: .2rem;
+			}
+		}
+
+		&-text {
+			font-size: 1.6rem;
+			color: var(--white);
+			line-height: 2.2rem;
+
+			&--strong {
+				font-size: 3rem;
+				font-family: $azo-black;
+				color: var(--white);
+				letter-spacing: -.1rem;
+				line-height: 3rem;
+
+				span {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+
+	&__bar {
+		&-text {
+			font-size: 1.5rem;
+			font-weight: var(--fw-bold);
+			text-transform: uppercase;
+			color: var(--white);
+			text-align: center;
+		}
+	}
+}
+
+.modal {
+	&__title {
+		color: var(--white);
+		font-size: 3rem;
+		font-family: $azo-black;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+
+.footer {
+	&__title {
+		font-family: $azo-black;
+		font-size: 1.8rem;
+		letter-spacing: .2rem;
+		color: var(--white);
+		text-align: center;
+	}
+
+	&__logo {
+		&-text {
+			font-size: 1.8rem;
+			color: var(--white);
+		}
+	}
+
+	&__list {
+		&-item {
+			font-size: 1rem;
+			color: var(--white);
+			letter-spacing: .2rem;
+		}
+	}
+
+	&__text {
+		font-size: 1rem;
+		color: var(--white);
+		letter-spacing: .2rem;
+	}
+}

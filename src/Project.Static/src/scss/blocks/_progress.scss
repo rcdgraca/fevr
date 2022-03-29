@@ -1,0 +1,122 @@
+.progress {
+	@include size(100%, auto);
+	padding: 1.5rem;
+	@extend %flex-wrap;
+	justify-content: center;
+	position: relative;
+	margin-top: -10rem;
+	border-top: .1rem solid rgba(255, 255, 255, .25);
+	background: linear-gradient(180deg, rgba(var(--black-rgb), 1) 0%, rgba(var(--black-rgb), 0) 100%);
+
+	&::before {
+		content: '';
+		@include size(100%, 90%);
+		@include absolute(bottom 0 left 0);
+		background-color: var(--black);
+	}
+
+	&__wrapper {
+		width: 100%;
+		max-width: 120rem;
+		@extend %flex-wrap;
+		justify-content: center;
+		position: relative;
+	}
+
+	&__nav {
+		@extend %flex-wrap;
+		@include absolute(top -4.9rem);
+
+		&-item {
+			margin-right: 4rem;
+			padding-bottom: 1.5rem;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			&--active {
+				border-bottom: .2rem solid var(--white);
+			}
+		}
+	}
+
+	&__block {
+		flex-basis: calc(50% - 5rem);
+		margin-bottom: 6rem;
+
+		&-wrapper {
+			width: 100%;
+			@extend %flex-between;
+			margin: 6rem 0;
+		}
+
+		&-row {
+			width: 100%;
+			@extend %flex-center-v;
+			margin-bottom: 3rem;
+
+			&--center {
+				justify-content: center;
+			}
+		}
+
+		&-title {
+			span {
+				margin-left: 2rem;
+			}
+		}
+
+		&-icon {
+			margin-right: 2rem;
+		}
+	}
+
+	&__bar {
+		@include size(100%, 5.5rem);
+		padding: 1rem;
+		border-radius: 3rem;
+		position: relative;
+		background: rgba(196, 196, 196, .01);
+		box-shadow: inset 0 2rem 28rem -18rem rgba(255, 255, 255, .5), inset 0 3rem 5rem -2rem var(--white), inset 0 -41rem 34rem -32rem rgba(96, 68, 145, .3), inset 0 49rem 50rem -24rem rgba(202, 172, 255, .3), inset 0 2rem 9rem rgba(154, 146, 210, .3), inset 0 .5rem 20rem rgba(227, 222, 255, .2);
+		backdrop-filter: blur(5rem);
+		margin-bottom: 1rem;
+		&.complete {
+			cursor: pointer;
+		}
+
+		&-outer {
+			@include size(100%);
+			background: linear-gradient(180deg, var(--white) 0, var(--black) 100%);
+			border-radius: 2rem;
+			opacity: .6;
+			backdrop-filter: blur(5rem);
+			box-shadow: inset 0 2rem 28rem -18rem rgba(255, 255, 255, .5), inset 0 3rem 5rem -2rem var(--white), inset 0 -41rem 34rem -32rem rgba(96, 68, 145, .3), inset 0 49rem 50rem -24rem rgba(202, 172, 255, .3), inset 0 2rem 9rem rgba(154, 146, 210, .3), inset 0 .5rem 20rem rgba(227, 222, 255, .2);
+		}
+
+		&-inner {
+			@include size(0, 100%);
+			background: linear-gradient(0deg, rgba(49, 255, 156, .5), rgba(49, 255, 156, .5)), linear-gradient(0deg, rgba(var(--white-rgb), .8), rgba(var(--white-rgb), 1)), linear-gradient(180deg, var(--white) 0%, rgba(var(--white-rgb), 0) 100%);
+			border-radius: 2rem;
+			box-shadow: 0 0 1.8rem #30e06f, 0 0 7.3rem #30e06f, inset 0 0 .7rem rgba(49, 255, 156, .5);
+			transition: 4s ease;
+			transition-delay: 1s;
+
+			.complete & {
+				background: linear-gradient(120deg, #e76af7 -18.1%, #a034ae 82.06%);
+				box-shadow: 0 1rem 5rem rgba(189, 57, 251, .5), 0 -.5rem 5rem #a639fb, 0 0 2rem #5a2361, inset 0 -1rem 2rem #581361;
+			}
+
+			.claimed & {
+				width: 100%;
+				background: linear-gradient(141.32deg, #30e06f 4.58%, #118139 122.96%);
+				box-shadow: 0 -.5rem 5rem #30e06f, inset 0 -1rem 2rem #11915a;
+			}
+		}
+
+		&-text {
+			@include absolute(top 50% left 50%);
+			transform: translate(-50%, -50%);
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"templates": [{
+		"href": "home",
+		"status": "not-started",
+		"text": "Homepage"
+	}]
+}

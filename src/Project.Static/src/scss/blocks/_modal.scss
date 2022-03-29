@@ -1,0 +1,41 @@
+.modal {
+	@include size(100%);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	@include fixed(top 0 left 0);
+	background-color: rgba(var(--black-rgb), .5);
+	backdrop-filter: blur(1rem);
+	@include z-index('bungalow');
+
+	&__wrapper {
+		@include size(50rem, 30rem);
+		background-color: var(--black);
+		border-radius: 2rem;
+		@extend %flex-center;
+		padding: 4rem;
+		box-shadow: var(--box-shadow);
+		position: relative;
+	}
+
+	&__btn {
+		@include absolute(top 2rem right 2rem);
+		@include size(2rem);
+
+		&::after {
+			content: '';
+			@include size(2rem, .2rem);
+			background-color: var(--white);
+			@include absolute(top 0 left 0);
+			transform: rotate(45deg);
+		}
+
+		&::before {
+			content: '';
+			@include size(2rem, .2rem);
+			background-color: var(--white);
+			@include absolute(top 0 left 0);
+			transform: rotate(-45deg);
+		}
+	}
+}

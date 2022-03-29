@@ -1,0 +1,16 @@
+.social-icons {
+	@extend %flex-wrap;
+	margin-right: 5rem;
+
+	.footer & {
+		margin-right: 0;
+	}
+
+	&-item {
+		margin-right: 2rem;
+
+		&:last-of-type {
+			margin-right: 0
+		}
+	}
+}

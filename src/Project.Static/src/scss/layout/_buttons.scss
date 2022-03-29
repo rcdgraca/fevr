@@ -1,0 +1,6 @@
+.btn {
+	padding: .5rem 1rem;
+	@extend %flex-center-v;
+	background: linear-gradient(170deg, var(--white) 33%, var(--blue-200) 180%);
+	box-shadow: var(--box-shadow);
+}

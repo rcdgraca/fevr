@@ -1,0 +1,14 @@
+doctype html
+html(lang='pt')
+	head
+
+		- const pageTitle = 'PageTitle'
+		block vars
+		include header/head
+	body
+		a.skip-content.sr-only.sr-only-focusable(href='#content') ir para o conteúdo principal
+		include header/header
+		main.wrapper#content
+			block blocks
+		include footer/footer
+		include footer/scripts
